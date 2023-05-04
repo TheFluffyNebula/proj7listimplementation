@@ -1,0 +1,71 @@
+--1000 elements--
+Trial 1:
+ArrayList sort 1000 Hare objects: 1.5803 milliseconds
+ArrayList shuffle 1000 Hare objects: 0.5091 milliseconds
+ArrayList get random element 1000000 times: 27.322 milliseconds
+ArrayList get each element sequentially: 0.0781 milliseconds   
+LinkedList sort 1000 Hare objects: 1.6741 milliseconds
+LinkedList shuffle 1000 Hare objects: 0.2326 milliseconds
+LinkedList get random element 1000000 times: 372.4888 milliseconds
+LinkedList get each element sequentially: 0.4062 milliseconds
+Trial 2:
+ArrayList sort 1000 Hare objects: 1.3241 milliseconds
+ArrayList shuffle 1000 Hare objects: 0.4134 milliseconds
+ArrayList get random element 1000000 times: 31.6069 milliseconds
+ArrayList get each element sequentially: 0.0983 milliseconds
+LinkedList sort 1000 Hare objects: 0.8781 milliseconds
+LinkedList shuffle 1000 Hare objects: 0.2375 milliseconds
+LinkedList get random element 1000000 times: 361.5185 milliseconds
+LinkedList get each element sequentially: 0.4461 milliseconds
+--5000 elements--
+Trial 1:
+ArrayList sort 5000 Hare objects: 3.4786 milliseconds
+ArrayList shuffle 5000 Hare objects: 0.9634 milliseconds
+ArrayList get random element 1000000 times: 30.3219 milliseconds
+ArrayList get each element sequentially: 0.2451 milliseconds
+LinkedList sort 5000 Hare objects: 3.2965 milliseconds
+LinkedList shuffle 5000 Hare objects: 0.9041 milliseconds
+LinkedList get random element 1000000 times: 2026.3941 milliseconds
+LinkedList get each element sequentially: 10.3076 milliseconds
+Trial 2:
+ArrayList sort 5000 Hare objects: 3.9164 milliseconds
+ArrayList shuffle 5000 Hare objects: 1.0219 milliseconds
+ArrayList get random element 1000000 times: 33.5861 milliseconds
+ArrayList get each element sequentially: 0.1885 milliseconds
+LinkedList sort 5000 Hare objects: 5.5357 milliseconds
+LinkedList shuffle 5000 Hare objects: 2.986 milliseconds
+LinkedList get random element 1000000 times: 2028.4472 milliseconds
+LinkedList get each element sequentially: 9.2425 milliseconds
+--10000 elements--
+Trial 1:
+ArrayList sort 10000 Hare objects: 13.5068 milliseconds
+ArrayList shuffle 10000 Hare objects: 3.8987 milliseconds
+ArrayList get random element 1000000 times: 35.4359 milliseconds
+ArrayList get each element sequentially: 1.072 milliseconds
+LinkedList sort 10000 Hare objects: 26.5139 milliseconds
+LinkedList shuffle 10000 Hare objects: 4.0566 milliseconds
+LinkedList get random element 1000000 times: 4067.6667 milliseconds
+LinkedList get each element sequentially: 40.5815 milliseconds
+Trial 2:
+ArrayList sort 10000 Hare objects: 11.255 milliseconds
+ArrayList shuffle 10000 Hare objects: 3.1255 milliseconds
+ArrayList get random element 1000000 times: 38.0447 milliseconds
+ArrayList get each element sequentially: 0.349 milliseconds
+LinkedList sort 10000 Hare objects: 10.8663 milliseconds
+LinkedList shuffle 10000 Hare objects: 8.0515 milliseconds
+LinkedList get random element 1000000 times: 3899.8594 milliseconds
+LinkedList get each element sequentially: 43.8749 milliseconds
+
+For the sort operation, the array list is slightly better than the linked list. However, due to the linked list's
+inconsistency, it can sometimes beat the arary list in this operation. For the shuffle operation, the array list
+consistently beats the linked list at higher numbers of elements but it's more of a toss-up at lower amounts. For
+getting elements, the array list is far better than the linked list at all amounts of elements. Finally, the array list
+is about equal to the linked list for getting each element sequentially.
+
+The array list is better at sorting since it has faster access to its elements. For shuffling, it's the same story as sorting.
+Here, the linked list has to swap virtually all of its pointers while the array list has an easier time with its 
+contiguous space in memory.
+For getting elements, the array list is far better since it can just go to the location in memory direction through the index, 
+whereas for the linked list it has to go all the way down the line until it hits the element. This can take long, especially if
+the element is near the end of the list. That's why they're roughly equal in getting all elements sequentially, since they both 
+go "down the line."
